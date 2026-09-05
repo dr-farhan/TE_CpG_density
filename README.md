@@ -156,24 +156,7 @@ family, locus age, genomic context, assembly version, and interval length.
 - Malformed `bedtools nuc` rows and rows without the expected columns are
   skipped, matching the original script behavior.
 
-## Validation
 
-The repository includes a synthetic FASTA/BED integration test with intervals
-covering CpG-rich sequence, ambiguous bases, and an interval without C or G:
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-The test requires both `pybedtools` and the `bedtools` executable.
-
-## Acknowledgment
-
-The script retains a simple positional command-line interface and the
-comment-led procedural organization used by the Python utilities in
-[TEProf2Paper](https://github.com/twlab/TEProf2Paper), while remaining a Python
-3 program. Its CpG calculations and input/output behavior are unchanged from
-the original `annotate_cpg_density.py` implementation.
 
 ## Citation
 
