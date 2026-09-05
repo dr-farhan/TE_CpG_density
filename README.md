@@ -141,22 +141,6 @@ CpG composition is reference-sequence based; it does not measure DNA
 methylation. For TE analyses, interpret these values in the context of TE
 family, locus age, genomic context, assembly version, and interval length.
 
-## Behavioral details and limitations
-
-- Output files are created in the directory from which the command is run, not
-  beside the input BED file.
-- Inputs from different directories that share a basename generate the same
-  output names and can overwrite one another.
-- Chromosome names in the BED and FASTA must match (for example, `chr1` versus
-  `1`).
-- Ambiguous reference bases contribute to interval length but not to C or G
-  counts.
-- Invalid or out-of-range intervals are handled by BEDTools; inspect BEDTools
-  messages when an interval cannot be evaluated.
-- Malformed `bedtools nuc` rows and rows without the expected columns are
-  skipped, matching the original script behavior.
-
-
 
 ## Citation
 
